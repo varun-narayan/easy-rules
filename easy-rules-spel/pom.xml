@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jeasy</groupId>
         <artifactId>easy-rules</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>easy-rules-spel</artifactId>
@@ -13,16 +13,14 @@
     <description>Spring Expression Language integration module</description>
 
     <properties>
-        <spring.version>4.3.23.RELEASE</spring.version>
-        <system-rules.version>1.19.0</system-rules.version>
-        <jackson.version>2.9.8</jackson.version>
+        <spring.version>4.3.24.RELEASE</spring.version>
     </properties>
 
     <scm>
         <url>git@github.com:j-easy/easy-rules.git</url>
         <connection>scm:git:git@github.com:j-easy/easy-rules.git</connection>
         <developerConnection>scm:git:git@github.com:j-easy/easy-rules.git</developerConnection>
-        <tag>easy-rules-3.3.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>

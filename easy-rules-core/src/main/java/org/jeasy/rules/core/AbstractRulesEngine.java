@@ -36,22 +36,20 @@ import java.util.List;
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
-abstract class AbstractRuleEngine implements RulesEngine {
+public abstract class AbstractRulesEngine implements RulesEngine {
 
     RulesEngineParameters parameters;
     List<RuleListener> ruleListeners;
     List<RulesEngineListener> rulesEngineListeners;
 
-    AbstractRuleEngine() {
+    AbstractRulesEngine() {
         this(new RulesEngineParameters());
     }
 
-    AbstractRuleEngine(final RulesEngineParameters parameters) {
+    AbstractRulesEngine(final RulesEngineParameters parameters) {
         this.parameters = parameters;
         this.ruleListeners = new ArrayList<>();
-        this.ruleListeners.add(new DefaultRuleListener());
         this.rulesEngineListeners = new ArrayList<>();
-        this.rulesEngineListeners.add(new DefaultRulesEngineListener(parameters));
     }
 
     @Override

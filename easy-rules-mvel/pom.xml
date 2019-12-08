@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jeasy</groupId>
         <artifactId>easy-rules</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>easy-rules-mvel</artifactId>
@@ -14,14 +14,13 @@
 
     <properties>
         <mvel2.version>2.4.3.Final</mvel2.version>
-        <system-rules.version>1.19.0</system-rules.version>
     </properties>
 
     <scm>
         <url>git@github.com:j-easy/easy-rules.git</url>
         <connection>scm:git:git@github.com:j-easy/easy-rules.git</connection>
         <developerConnection>scm:git:git@github.com:j-easy/easy-rules.git</developerConnection>
-        <tag>easy-rules-3.3.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
