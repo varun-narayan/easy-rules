@@ -47,8 +47,10 @@ public class JexlConditionTest {
         assertThat(evaluationResult).isTrue();
     }
 
-    @Test
-    public void whenDeclaredFactIsNotPresent_thenShouldReturnFalse() {
+    // Note this behaviour is different in SpEL, where a missing fact is silently ignored and returns false
+    // This behaviour is similar to MVEL though, where a missing fact results in an exception
+    @Test(expected = RuntimeException.class)
+    public void whenDeclaredFactIsNotPresent_thenShouldThrowRuntimeException() {
         // given
         Condition isHot = new JexlCondition("temperature > 30");
         Facts facts = new Facts();
@@ -57,7 +59,7 @@ public class JexlConditionTest {
         boolean evaluationResult = isHot.evaluate(facts);
 
         // then
-        assertThat(evaluationResult).isFalse();
+        // expected exception
     }
 
     @Test
