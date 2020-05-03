@@ -98,11 +98,7 @@ public class JexlActionTest {
     @Test
     public void testJexlActionWithExpressionAndFacts() throws Exception {
         // given
-        JexlEngine jexl = new JexlBuilder()
-                .create();
-        Action printAction = new JexlAction(
-                "var random = function() { System.out.println(\"Random from JEXL = \" + new('java.util.Random', 123).nextInt(10)); }; random();",
-                jexl);
+        Action printAction = new JexlAction("var random = function() { System.out.println(\"Random from JEXL = \" + new('java.util.Random', 123).nextInt(10)); }; random();"                );
         Facts facts = new Facts();
         facts.put("System", System.class);
 
