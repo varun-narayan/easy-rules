@@ -77,13 +77,13 @@ public class JexlRuleFactory extends AbstractRuleFactory<JexlEngine> {
     protected Rule createSimpleRule(RuleDefinition ruleDefinition, JexlEngine jexl) {
         Objects.requireNonNull(ruleDefinition, "ruleDefinition cannot be null");
         Objects.requireNonNull(jexl, "jexl cannot be null");
-        JexlRule rule = new JexlRule()
+        JexlRule rule = new JexlRule(jexl)
                 .name(ruleDefinition.getName())
                 .description(ruleDefinition.getDescription())
                 .priority(ruleDefinition.getPriority())
-                .when(ruleDefinition.getCondition(), jexl);
+                .when(ruleDefinition.getCondition());
         for (String action : ruleDefinition.getActions()) {
-            rule.then(action, jexl);
+            rule.then(action);
         }
         return rule;
     }
