@@ -1,0 +1,17 @@
+﻿name: "java developer rule"
+description: "to check if java is in skill set"
+priority: 1
+condition: "isJAVA = null;
+  for (skill: person.skills) {
+    if (skill.name=='JAVA') {
+      isJAVA = true;
+      person.JAVA = true;
+      System.out.println(\"Greater than zero!\");
+    } else {
+      isJAVA = false;
+    }
+}
+isJAVA;
+"
+actions:
+  - "System.out.println(\"role is developer\");"
